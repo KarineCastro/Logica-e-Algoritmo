@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        E   -> &&
+        OU  -> ||
+        NÃO ->  !
+        */
+       //Exemplo 1
+       //let valor = prompt("Informe o valor da compra");
+        // let tipoPagamento = confirm("Pagamento à vista?");
+
+        //Condicional
+      /*  if (valor >= 200 && tipoPagamento == true){
+            document.write(`Total a pagar R$ ${valor*0.9}`);
+        }else{
+            document.write(`Total a pagar R$ ${valor}`);
+        }*/
+
+        //Exemplo 2  
+       /* Converção de dados
+       1° Texto para número inteiro - parseInt()
+       2° Texto para número real - parseFloat()
+       3° Número para texto - toString()
+       */
+        //Dados
+        let nota1 = parseFloat(prompt("Informe a primeira nota"));
+        let nota2 = parseFloat(prompt("Informe a segunda nota"));
+        // document.write((nota1+nota2)/2);
+        
+           //Realizar calculo de media
+        let media = (nota1+nota2)/2
+
+        //Condicional
+       //if(media >=7){
+       //   document.write(" Aprovado(a)");
+       //}
+       //else
+      // document.write(" Reprovado(a)");
+        //Exemplos 3
+        //Operador Ternário
+       document.write(media>=7 ? "Aprovado(a)" : media>=5 ? "Em exame" : "Reprovado(a)");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
