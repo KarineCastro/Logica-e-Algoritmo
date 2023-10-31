@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Vetor
+        let produtos=[];
+
+        //Menu
+        let menu="1° Cadastrar produto\n";
+            menu+="2° Listar produtos\n";
+            menu+="3° Remover produtos\n";
+            menu+="4° Finalizar";
+        
+        //Opção
+        let opcao = 0;
+
+        //Laco de de repetição
+        do{
+            //Obter a opção
+            opcao = parseInt(prompt(menu));
+
+            //Ações
+            switch (opcao) {
+                case 1:
+                produtos.push(prompt("Informe o produto que deseja cadastrar"));
+                    alert("Produto cadastrado com sucesso!");
+                    break;
+                case 2:
+                let lista = "***** PRODUTOS CADASTRADOS\n\n" 
+                    for(let indice = 0; indice < produtos.length; indice++){
+                        lista+= produtos[indice] + "\n"
+                    }
+                    alert(lista);
+                    break;
+                case 3:
+                    let indiceRemocao = -1; // Indice que não exista vetor (Nagativo)
+                    let nomeProdutoRemocao = prompt("Informe o nome do produto que deseja remover");
+
+                    for(let indice = 0; indice < produtos.length; indice++){
+                        if(nomeProdutoRemocao == produtos[indice]){
+                            indiceRemocao = indice;
+                        }
+                    if(indiceRemocao != -1){
+                        produtos.splice(indiceRemocao, 1);
+                        alert("Produto removido com sucesso!");
+                    }
+                    alert("O produto informado não foi encontrado");
+                    }
+                    break;
+                case 4:
+                    alert("4° Finalizar");
+                    break;
+                default: 
+                    ("Opção inválida!");
+                    break;
+            }
+
+        }while(opcao != 4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
